@@ -1,5 +1,0 @@
-Saltos del Petrohue;Naturaleza;20000;Puerto Varas;Los Lagos
-Puerto Varas;Gastronomico;28000;Puerto Varas;Los Lagos
-Isla Chiloe;Patrimonial;45000;Chiloe;Los Lagos
-Rafting Rio Petrohue;Aventura;42000;Petrohue;Los Lagos
-Volcan Osorno;Aventura;34000;Osorno;Los Lagos
