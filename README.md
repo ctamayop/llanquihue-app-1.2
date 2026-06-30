@@ -153,7 +153,7 @@ Observar en consola la información de los servicios turísticos creados.
 
 ---
 
-© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Sumativa 2
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Formativa 3
 
 
 
