@@ -4,7 +4,8 @@ public class ExcursionCultural extends ServicioTuristico {
 
     private String lugarHistorico;
 
-    public ExcursionCultural(String nombre, int duracionHoras, String lugarHistorico) {
+    public ExcursionCultural(String nombre, double duracionHoras,
+                             String lugarHistorico) {
         super(nombre, duracionHoras);
         this.lugarHistorico = lugarHistorico;
     }
@@ -18,8 +19,8 @@ public class ExcursionCultural extends ServicioTuristico {
     }
 
     @Override
-    public String toString() {
-        return super.toString() +
-                "Lugar histórico: " + lugarHistorico;
+    public String mostrarInformacion() {
+        return "Tipo: Excursión cultural\n"
+                + "Lugar histórico: " + lugarHistorico;
     }
 }

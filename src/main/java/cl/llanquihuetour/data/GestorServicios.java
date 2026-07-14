@@ -5,21 +5,70 @@ import cl.llanquihuetour.model.PaseoLacustre;
 import cl.llanquihuetour.model.RutaGastronomica;
 import cl.llanquihuetour.model.ServicioTuristico;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class GestorServicios {
 
-public ServicioTuristico[] crearServicios(){
+    private final List<ServicioTuristico> servicios;
 
-    ServicioTuristico[] servicio = new ServicioTuristico[6];
+    public GestorServicios() {
+        servicios = new ArrayList<>();
+        cargarServiciosDePrueba();
+    }
 
-    servicio[0] = new RutaGastronomica("De Puerto Varas a la mesa",4, 4);
-    servicio[1] = new RutaGastronomica("Sabores de Chiloe", 5, 6);
+    private void cargarServiciosDePrueba() {
+        servicios.add(new RutaGastronomica(
+                "Sabores de Puerto Varas",
+                4,
+                5
+        ));
 
-    servicio[2] = new PaseoLacustre("Lago todos los santos", 4, "Catamaran");
-    servicio[3] = new PaseoLacustre("Paseo lago LLanquihue", 2, "Lancha");
+        servicios.add(new RutaGastronomica(
+                "Ruta gastronómica de Frutillar",
+                3.5,
+                4
+        ));
 
-    servicio[4] = new ExcursionCultural("Patrimonio Frutillar", 3, "Museo colonial Alemán");
-    servicio[5] = new ExcursionCultural("Ruta de iglesias de Chiloe", 6, "Iglesias patrimoniales de Chiloe");
+        servicios.add(new PaseoLacustre(
+                "Navegación por el lago Llanquihue",
+                2,
+                "Catamarán"
+        ));
 
-    return servicio;
-     }
+        servicios.add(new PaseoLacustre(
+                "Paseo lacustre por Puerto Octay",
+                1.5,
+                "Lancha"
+        ));
+
+        servicios.add(new ExcursionCultural(
+                "Ruta de Iglesias de Chiloé",
+                6,
+                "Iglesias patrimoniales de Chiloé"
+        ));
+
+        servicios.add(new ExcursionCultural(
+                "Visita al Museo Alemán",
+                2,
+                "Museo Colonial Alemán de Frutillar"
+        ));
+    }
+
+    public List<ServicioTuristico> getServicios() {
+        return servicios;
+    }
+
+    public String mostrarServicios() {
+        StringBuilder resultado = new StringBuilder();
+
+        for (ServicioTuristico servicio : servicios) {
+            resultado.append(servicio.toString())
+                    .append("\n")
+                    .append("----------------------------------------")
+                    .append("\n");
+        }
+
+        return resultado.toString();
+    }
 }

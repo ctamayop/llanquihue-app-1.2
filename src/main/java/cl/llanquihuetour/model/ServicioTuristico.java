@@ -1,11 +1,11 @@
 package cl.llanquihuetour.model;
 
-public class ServicioTuristico {
+public abstract class ServicioTuristico {
 
     private String nombre;
-    private int duracionHoras;
+    private double duracionHoras;
 
-    public ServicioTuristico(String nombre, int duracionHoras) {
+    public ServicioTuristico(String nombre, double duracionHoras) {
         this.nombre = nombre;
         this.duracionHoras = duracionHoras;
     }
@@ -18,16 +18,20 @@ public class ServicioTuristico {
         this.nombre = nombre;
     }
 
-    public int getDuracionHoras() {
+    public double getDuracionHoras() {
         return duracionHoras;
     }
 
-    public void setDuracionHoras(int duracionHoras) {
+    public void setDuracionHoras(double duracionHoras) {
         this.duracionHoras = duracionHoras;
     }
 
+    public abstract String mostrarInformacion();
+
+    @Override
     public String toString() {
-        return  "Nombre: " + nombre + "\n" +
-                "Duración horas: " + duracionHoras + "\n";
+        return "Nombre: " + nombre + "\n"
+                + "Duración: " + duracionHoras + " horas\n"
+                + mostrarInformacion();
     }
 }
