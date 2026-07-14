@@ -271,7 +271,7 @@ LLANQUIHUE TOUR
 
 ---
 
-© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Formativa 4
+© Duoc UC | Escuela de Informática y Telecomunicaciones | Evaluación Sumativa 3
 
 
 
